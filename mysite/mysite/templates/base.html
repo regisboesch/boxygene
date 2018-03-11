@@ -1,8 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>{% block title %}Simple is Better Than Complex{% endblock %}</title>
+    {% block head %}
+    {% include 'material/includes/material_css.html' %}
+    {% endblock %}
   </head>
   <body>
     <header>
@@ -16,6 +20,11 @@
     </header>
     <main>
       {% block content %}
+      {% endblock %}
+
+      {% block js %}
+	<script src="{% static 'material/js/jquery.js' %}"></script>
+	{% include 'material/includes/material_js.html' %}
       {% endblock %}
     </main>
   </body>
