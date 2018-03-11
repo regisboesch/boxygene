@@ -31,8 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'mysite.office',
+
+    #Material
     'material',
+    'material.frontend',
+
+    'mysite.office',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
